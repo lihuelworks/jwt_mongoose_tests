@@ -1,4 +1,4 @@
-# mongodb_jwt_authentication_test
+# mongodb_jwt_mongoose_validation_template
 
 Quick MongoDB + JWT login template for future use
 
