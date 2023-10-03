@@ -1,14 +1,9 @@
+ const express = require('express');
+ const router = express.Router();
 
+ const {login,dashboard} = require('../controllers/main')
 
-const login = async (req, res) => {
-    res.send('Fake Login/Register/Signup')
-}
+ router.route('/dashboard').get(dashboard)
+ router.route('/login').get(login)
 
-const dashboard = async(req, res) => {
-    const luckyNumber = Math.floor(Math.random() * 100)
-    res.status(200).json({msg: `Hello, John Doe`, secret: `Here is your authorized data, your lucky number is ${luckyNumber}`})
-}
-
-module.exports = {
-    login, dashboard
-}
+ module.exports = router
